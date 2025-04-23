@@ -39,14 +39,14 @@ def train_model(ex_dict):
     ex_dict['Model'].load(pt_path)
     return ex_dict
 
-def detect_and_save_bboxes(model, image_paths, confidence):
+def detect_and_save_bboxes(model, image_paths, conf):
     
     # model = YOLO(model_path)
     
     results_dict = {}
 
     for img_path in image_paths:
-        results = model(img_path, verbose=False, task='detect', conf=confidence)
+        results = model(img_path, verbose=False, task='detect', conf=conf)
         img_results = []
         for result in results:
             boxes = result.boxes
