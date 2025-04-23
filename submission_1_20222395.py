@@ -54,7 +54,7 @@ def submission_1_20222395(yaml_path, output_json_path):
     lr = 1e-3
     momentum = 0.9
     weight_decay = 5e-5
-    confidence = 0.1
+    confidence = 0.15
     
     ###### can be modified (Only Models, which can't be modified in demo) ######
     from ultralytics import YOLO
